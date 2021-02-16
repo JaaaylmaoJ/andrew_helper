@@ -2,7 +2,8 @@
 
 require_once DOCUMENT_ROOT . '/app/template/header.php';
 global $APP;
-d($APP->errors);
+
+
 ?>
 
 <div class="view_wrap">
