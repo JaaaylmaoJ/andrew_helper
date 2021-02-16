@@ -1,4 +1,4 @@
-let filesExt    = ['xlsx'];
+let filesExt    = ['xlsx', 'xls'];
 let errors      = [];
 
 $( document ).ready(function() {

@@ -1,3 +1,4 @@
 /.idea
 /app/uploads/*
+/app/results/*
 /vendor

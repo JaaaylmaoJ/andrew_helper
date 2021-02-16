@@ -2,7 +2,7 @@
 
 require_once DOCUMENT_ROOT . '/app/template/header.php';
 global $APP;
-
+d($APP->errors);
 ?>
 
 <div class="view_wrap">
@@ -39,10 +39,31 @@ global $APP;
 
             <button type="submit" class="btn btn-primary">Отправить</button>
 
-            <?if(isset($APP->page->content['file'])):?>
-                <a href="<?=$APP->page->content['file']?>" download>Качать здесь</a>
+
+
+            <div class="form-group pt-3">
+                Здесь появится ссылка:
+                <?if(isset($APP->page->content['files'])):?>
+                    <?foreach ($APP->page->content['files'] as $file) {?>
+                        <a href="<?=$file?>" class="csv_download_link" download>Качать здесь</a>
+                    <?}?>
+                <?endif;?>
+            </div>
+
+
+            <?if(count($APP->errors) !== 0):?>
+                <div class="form-group pt-1">
+
+                        <?foreach ($APP->errors as $error) {?>
+                            <p>Ошибка: <?=$error?></p>
+                        <?}?>
+                </div>
             <?endif;?>
+
+
+
         </form>
+
     </div>
 </div>
 

@@ -66,3 +66,8 @@ body {
         box-shadow: 0 0 0 0 rgba(204,169,44, 0);
     }
 }
+
+.csv_download_link {
+    color: #84fbf0;
+    font-weight: 600;
+}

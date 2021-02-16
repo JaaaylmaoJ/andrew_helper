@@ -7,6 +7,7 @@ use Engine\Router;
 class Application
 {
     public $page;
+    public $errors = [];
 
     public function __construct()
     {
@@ -16,7 +17,7 @@ class Application
     public function run() {
         RequestData::saveFiles();
 
-        $this->page->content['file'] = RequestData::handleUploaded();
+        $this->page->content['files'] = RequestData::handleUploaded();
 
         Router::includePage();
     }
