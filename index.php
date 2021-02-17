@@ -3,7 +3,7 @@
 //ini_set('display_errors', 1);
 //ini_set('display_startup_errors', 1);
 
-require_once 'W:/OpenServer3/domains/andrew/app/loader.php';
+require_once $_SERVER['DOCUMENT_ROOT'] . '/app/loader.php';
 
 $APP = new \Engine\Application();
 $APP->run();
