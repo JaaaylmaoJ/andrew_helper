@@ -1,12 +1,18 @@
 {
     "name": "o_o/andrew",
+    "description": "Now i can help Andrew with this",
     "authors": [
         {
             "name": "JoyJ",
             "email": "nikichns@rambler.ru"
         }
     ],
-    "require": {
-        "shuchkin/simplexlsx": "^0.8.21"
+    "autoload": {
+        "psr-4": {
+            "Engine\\": "app/engine/"
+        },
+        "files": [
+            "app/functions.php"
+        ]
     }
 }
