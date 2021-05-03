@@ -1,19 +1,15 @@
 <?php
 
 require_once DOCUMENT_ROOT . '/app/template/header.php';
-global $APP;
 
+global $APP;
 
 ?>
 
 <div class="view_wrap">
-    <!--А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а
-    А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а
-    А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а
-    А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а А н д р ю х а-->
-    <?for($i = 0; $i < (13*14); $i++):?>
+    <?foreach (range(0, 13*14) as $i):?>
         Андрюха
-    <?endfor;?>
+    <?endforeach;?>
 </div>
 
 <div class="centered_wrap">
@@ -29,8 +25,6 @@ global $APP;
 
             <button type="submit" class="btn btn-primary">Отправить</button>
 
-
-
             <div class="form-group pt-3">
                 Здесь появится ссылка:
                 <?if(isset($APP->page->content['files'])):?>
@@ -40,20 +34,15 @@ global $APP;
                 <?endif;?>
             </div>
 
-
             <?if(count($APP->errors) !== 0):?>
                 <div class="form-group pt-1">
-
-                        <?foreach ($APP->errors as $error) {?>
-                            <p>Ошибка: <?=$error?></p>
-                        <?}?>
+                    <?foreach ($APP->errors as $error) {?>
+                        <p>Ошибка: <?=$error?></p>
+                    <?}?>
                 </div>
             <?endif;?>
 
-
-
         </form>
-
     </div>
 </div>
 
