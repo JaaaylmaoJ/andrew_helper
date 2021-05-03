@@ -2,8 +2,6 @@
 
 namespace Engine;
 
-use XlsToCsv;
-
 class RequestData
 {
     private static $processedFiles;
@@ -28,8 +26,6 @@ class RequestData
     public static function handleUploaded() {
         if(count(self::$savedUploadedFiles) == 0) return;
 
-        /*Впихнуть обработку загруженного xls/xlsx файла
-        */
         foreach (self::$savedUploadedFiles as $savedFile) {
             $export = new XlsToCsv();
 
@@ -39,10 +35,6 @@ class RequestData
             $processedFiles[] = $export->getCsvUrl();
         }
 
-        $fileName = 'xlsx/akb_invest.xlsx';
-
-
         return $processedFiles;
-        // return '/app/results/test.txt';
     }
 }

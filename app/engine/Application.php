@@ -2,8 +2,6 @@
 
 namespace Engine;
 
-use Engine\Router;
-
 class Application
 {
     public $page;

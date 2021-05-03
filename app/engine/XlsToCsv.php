@@ -12,13 +12,6 @@ class XlsToCsv
     protected $calculatedData;
     protected $savedFileUrl;
 
-    public $errors;
-
-    public function __construct()
-    {
-
-    }
-
     public function run()
     {
         $this->calc();
@@ -84,7 +77,7 @@ class XlsToCsv
                 $kpi = 0;
 
             //расчет цены запроса
-            //$price =  ($kpi !== 0) ? round($kpi/100*83.75, 2) : 0; //mylablife
+            //$price =  ($kpi !== 0) ? round($kpi/100*83.75, 2) : 0;
             $price =  ($kpi !== 0) ? round($kpi/100*93, 2) : 0;
 
 
