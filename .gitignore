@@ -2,3 +2,4 @@
 /app/uploads/*
 /app/results/*
 /vendor
+composer.lock
