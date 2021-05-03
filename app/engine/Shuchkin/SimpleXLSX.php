@@ -1,4 +1,6 @@
 <?php
+
+namespace Engine\Shuchkin;
 /**
  *    SimpleXLSX php class v0.8.17
  *    MS Excel 2007 workbooks reader

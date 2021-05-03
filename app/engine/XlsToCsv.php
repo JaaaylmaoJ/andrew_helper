@@ -1,5 +1,9 @@
 <?php
 
+namespace Engine;
+
+use Engine\Shuchkin\SimpleXLS;
+use Engine\Shuchkin\SimpleXLSX;
 
 class XlsToCsv
 {
